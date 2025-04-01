@@ -1,0 +1,36 @@
+<!ELEMENT social-network (users, posts)>
+
+<!ELEMENT users (user*)>
+<!ELEMENT posts (post*)>
+
+
+<!ELEMENT user (description?, attachments?)>
+<!ATTLIST user id ID #REQUIRED>
+<!ATTLIST user name CDATA #REQUIRED>
+<!ATTLIST user email CDATA #REQUIRED>
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT post (content?, likes?, attachments?)>
+<!ATTLIST post id ID #REQUIRED>
+<!ATTLIST post owner CDATA #REQUIRED>
+<!ELEMENT content (#PCDATA)>
+
+<!ELEMENT likes (like*)>
+<!ELEMENT like EMPTY>
+<!ATTLIST like id ID #REQUIRED>
+<!ATTLIST like user IDREF #REQUIRED>
+
+<!ELEMENT attachments (attachment*)>
+
+<!ELEMENT attachment EMPTY>
+<!ATTLIST attachment id ID #REQUIRED>
+<!ATTLIST attachment owner CDATA #REQUIRED>
+<!ATTLIST attachment type (image|post) #REQUIRED>
+<!ATTLIST attachment link CDATA #IMPLIED>
+<!ATTLIST attachment post IDREF #IMPLIED>
+
+
+
+
+
+ 

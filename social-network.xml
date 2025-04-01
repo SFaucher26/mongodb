@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE social-network SYSTEM "social-network.dtd">
+<social-network>
+  <users>
+    <user id="user-1" name="Jean-Marc" email="jm@example.com">
+      <description>
+                Ma bio!
+                blabla
+      </description>
+    </user>
+    <user id="user-2" name="sandrine" email="sandrine@example.com">
+      <description>
+                Blablabla !
+      </description>
+    </user>
+  </users>
+  <posts>
+        <post id="post-1" owner="user-1">
+            <content>
+                Mon post
+                Blabla
+            </content>
+            <likes>
+                <like id="like-post-1-user-1" user="user-1"/>
+                <like id="like-post-1-user-2" user="user-2"/>
+            </likes>
+            <attachments>
+                <attachment id="attachment-id" owner="user-1" type="image" link="https://preview.redd.it/radion-an-internet-radio-cli-client-written-in-bash-v0-bf28wvpwjync1.png?auto=webp&amp;s=5ea01b080358157f0d8b19962b541b742a89d9b0	"/>
+            </attachments>
+        </post>
+        <post id="post-2" owner="user-1">
+            <content>
+                I loved it !
+            </content>
+            <likes>
+                <like id="like-post-2-user-2" user="user-2" />
+            </likes>
+            <attachments>
+                <attachment id="attachment-2" owner="user-1" type="post" post="post-1" />
+            </attachments>
+        </post>
+  </posts>
+  
+</social-network>
